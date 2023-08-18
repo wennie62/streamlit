@@ -54,7 +54,7 @@ time = st.sidebar.time_input('大于时间', datetime.time(1,0))
 
 
 def get_data():
-    file = r'C:\Users\jiangw14\CTS_workcount.xlsx'
+    file = r'CTS_workcount.xlsx'
     return pd.read_excel(file)
 df1 = get_data()
 # print(values)
