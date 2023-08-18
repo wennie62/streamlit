@@ -51,3 +51,24 @@ time = st.sidebar.time_input('大于时间', datetime.time(1,0))
 
 # # 在Streamlit中显示图表
 # st.pyplot(fig)
+
+
+def get_data():
+    file = r'C:\Users\jiangw14\CTS_workcount.xlsx'
+    return pd.read_excel(file)
+df1 = get_data()
+# print(values)
+
+ 
+
+df1=df1[df1['recipe']!='']
+df1=df1.dropna()
+df1=df1.drop_duplicates(['recipe'], keep='last')
+df1=df1.drop(columns=['Time'])
+df1=df1.drop(columns=['sheet_Count'])
+df1=pd.DataFrame(df1,columns=['recipe','HFWR.XYC105.EQUIP_CUTTME'])
+df1.style.set_properties(**{'background-color': 'black','color': 'green'})
+
+ 
+
+st.write("### CT Data By Cutter ($105)", df1.sort_index())
