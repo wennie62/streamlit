@@ -71,4 +71,4 @@ time = st.sidebar.time_input('大于时间', datetime.time(1,0))
 
  
 
-st.write("### CT Data By Cutter ($105)", df1.sort_index())
+# st.write("### CT Data By Cutter ($105)", df1.sort_index())
