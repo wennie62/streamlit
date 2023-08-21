@@ -7,7 +7,7 @@ aiosqlite
 alabaster
 altair==5.0.1
 anaconda-catalogs
-anaconda-client==1.11.3
+anaconda-client==1.1.1
 anaconda-navigator==2.4.2
 anaconda-project
 anyio
