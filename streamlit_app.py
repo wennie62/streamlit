@@ -17,12 +17,12 @@ time = st.sidebar.time_input('大于时间', datetime.time(1,0))
 
 # # values = st.sidebar.slider('速度',0.0, 200.0, (25.0, 75.0))
 # 主栏
-st.title('数据探索')
-# @st.cache(persist=True)
-def get_data():
-    file = r'CTS_workcount.xlsx'
-    return pd.read_csv(file, header=0)
-df = get_data()
+# st.title('数据探索')
+# # @st.cache(persist=True)
+# def get_data():
+#     file = r'CTS_workcount.xlsx'
+#     return pd.read_csv(file, header=0)
+# df = get_data()
 # # print(values)
 # df = data[data['Time'] > str(time)]
 
@@ -53,22 +53,22 @@ df = get_data()
 # st.pyplot(fig)
 
 
-# def get_data():
-#     file = r'CTS_workcount.xlsx'
-#     return pd.read_excel(file)
-# df1 = get_data()
-# # print(values)
+def get_data():
+    file = r'CTS_workcount.xlsx'
+    return pd.read_excel(file)
+df1 = get_data()
+# print(values)
 
  
 
-# df1=df1[df1['recipe']!='']
-# df1=df1.dropna()
-# df1=df1.drop_duplicates(['recipe'], keep='last')
-# df1=df1.drop(columns=['Time'])
-# df1=df1.drop(columns=['sheet_Count'])
-# df1=pd.DataFrame(df1,columns=['recipe','HFWR.XYC105.EQUIP_CUTTME'])
-# df1.style.set_properties(**{'background-color': 'black','color': 'green'})
+df1=df1[df1['recipe']!='']
+df1=df1.dropna()
+df1=df1.drop_duplicates(['recipe'], keep='last')
+df1=df1.drop(columns=['Time'])
+df1=df1.drop(columns=['sheet_Count'])
+df1=pd.DataFrame(df1,columns=['recipe','HFWR.XYC105.EQUIP_CUTTME'])
+df1.style.set_properties(**{'background-color': 'black','color': 'green'})
 
  
 
-# st.write("### CT Data By Cutter ($105)", df1.sort_index())
+st.write("### CT Data By Cutter ($105)", df1.sort_index())
