@@ -16,15 +16,15 @@ time = st.sidebar.time_input('大于时间', datetime.time(1,0))
 #day = st.sidebar.time_inpt('大于日期', datetime.day(1,0))
 
 # # values = st.sidebar.slider('速度',0.0, 200.0, (25.0, 75.0))
-# # 主栏
-# st.title('数据探索')
-# # @st.cache(persist=True)
-# def get_data():
-#     file = r'CTS_workcount.xlsx'
-#     return pd.read_csv(file, header=0)
-# df = get_data()
-# # # print(values)
-# # df = data[data['Time'] > str(time)]
+# 主栏
+st.title('数据探索')
+# @st.cache(persist=True)
+def get_data():
+    file = r'CTS_workcount.xlsx'
+    return pd.read_csv(file, header=0)
+df = get_data()
+# # print(values)
+# df = data[data['Time'] > str(time)]
 
  
 
