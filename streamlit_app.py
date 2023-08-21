@@ -16,45 +16,43 @@ time = st.sidebar.time_input('大于时间', datetime.time(1,0))
 #day = st.sidebar.time_inpt('大于日期', datetime.day(1,0))
 
 # # values = st.sidebar.slider('速度',0.0, 200.0, (25.0, 75.0))
-#主栏
-st.title('数据探索')
-# @st.cache(persist=True)
+# # 主栏
+# st.title('数据探索')
+# # @st.cache(persist=True)
+# def get_data():
+#     file = r'CTS_workcount.xlsx'
+#     return pd.read_csv(file, header=0)
+# df = get_data()
+# # # print(values)
+# # df = data[data['Time'] > str(time)]
+
+ 
+
+# fig, ax = plt.subplots(figsize=(8, 6))
+
+ 
+
+# ax.bar(df['Time'], df['LiAuto'], label='LiAuto')
+# ax.bar(df['Time'], df['BMW'], bottom=df['LiAuto'], label='BMW')
+# ax.bar(df['Time'], df['Geely'], bottom=df['LiAuto'] + df['BMW'], label='Value3')
+
+ 
+
+# ax.set_xlabel('Time')
+# ax.set_ylabel('Value')
+# ax.set_title('Stacked Bar Chart')
+# ax.legend()
+
+ 
+
+# plt.xticks(df['Time'])
+
+ 
+
+# # 在Streamlit中显示图表
+# st.pyplot(fig)
 def get_data():
-    file = r'CTS_workcount.xlsx'
-    return pd.read_csv(file, header=0)
-df = get_data()
-# print(values)
-df = data[data['Time'] > str(time)]
-
- 
-
-fig, ax = plt.subplots(figsize=(8, 6))
-
- 
-
-ax.bar(df['Time'], df['LiAuto'], label='LiAuto')
-ax.bar(df['Time'], df['BMW'], bottom=df['LiAuto'], label='BMW')
-ax.bar(df['Time'], df['Geely'], bottom=df['LiAuto'] + df['BMW'], label='Value3')
-
- 
-
-ax.set_xlabel('Time')
-ax.set_ylabel('Value')
-ax.set_title('Stacked Bar Chart')
-ax.legend()
-
- 
-
-plt.xticks(df['Time'])
-
- 
-
-# 在Streamlit中显示图表
-st.pyplot(fig)
-
-
-def get_data():
-    file = r'CTS_workcount.xlsx'
+    file = r'C:\Users\jiangw14\CTS_workcount.xlsx'
     return pd.read_excel(file)
 df1 = get_data()
 # print(values)
