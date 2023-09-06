@@ -3,3 +3,7 @@ numpy==1.25.2
 pandas==2.0.3
 streamlit==1.25.0
 openpyxl
+PIconnect==0.10.6
+plotly==5.9.0
+streamlit==1.26.0
+
