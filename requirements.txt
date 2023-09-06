@@ -1,8 +1,5 @@
 matplotlib==3.7.1
-numpy==1.24.3
-opencv_python==4.8.0.76
-pandas==1.5.3
-PIconnect==0.10.6
-PIconnect==0.10.6
-plotly==5.9.0
+numpy==1.25.2
+pandas==2.0.3
 streamlit==1.25.0
+openpyxl
